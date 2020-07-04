@@ -8,6 +8,8 @@
 
 body {
   background-color: #134517;
+  background: radial-gradient(ellipse at center, #308845 0%, #133116 100%);
+
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
