@@ -12,7 +12,9 @@ import {
 const Wrapper = styled.div`
   min-height: 100vh;
   position: relative;
-  z-index: 1;
+  & > div.content {
+    z-index: 1;
+  }
 `;
 
 interface BoardProps {}
@@ -22,15 +24,17 @@ export const Board: React.FC<BoardProps> = () => {
 
   return (
     <>
-      <BoardBackground />
       <Wrapper>
-        <NextRoundButton onClick={startNextRound} />
+        <BoardBackground />
+        <div className="content">
+          <NextRoundButton onClick={startNextRound} />
 
-        <div className="boardPool">
-          <CardsList cards={pool} />
+          <div className="boardPool">
+            <CardsList cards={pool} />
+          </div>
+
+          <Players players={players} />
         </div>
-
-        <Players players={players} />
       </Wrapper>
     </>
   );

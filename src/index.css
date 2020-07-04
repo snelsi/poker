@@ -9,6 +9,7 @@
 body {
   background-color: #134517;
   background: radial-gradient(ellipse at center, #308845 0%, #133116 100%);
+  background-size: cover;
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -17,8 +18,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
   width: 100%;
-  min-width: 1020px;
+
   position: relative;
+  overflow: auto;
+}
+
+#root {
+  width: 100%;
+  overflow: auto;
+}
+
+main {
+  min-width: 1020px;
 }
 
 li {
