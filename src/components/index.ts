@@ -2,6 +2,7 @@ export * from "./Board";
 export * from "./BoardBackground";
 export * from "./Card";
 export * from "./CardsList";
+export * from "./GitHubLink";
 export * from "./NextRoundButton";
 export * from "./Player";
 export * from "./PlayerCrown";
