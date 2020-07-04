@@ -27,7 +27,6 @@ const HighlightGroups = createGlobalStyle<HighlightPairsProps>`
 
 const Crown = styled.div`
   content: attr(data-score);
-  cursor: pointer;
 
   display: block;
   height: 125px;
@@ -39,18 +38,24 @@ const Crown = styled.div`
   line-height: 125px;
   color: #fff;
 
-  transition: transform 0.2s ease-out;
+  & > div {
+    cursor: pointer;
+    margin: auto;
+    transition: transform 0.2s ease-out;
+    user-select: none;
+    width: 180px;
 
-  &[data-won="true"] {
-    background: center no-repeat url(images/Crown.svg);
-    opacity: 1;
-  }
+    &[data-won="true"] {
+      background: center no-repeat url(images/Crown.svg);
+      opacity: 1;
+    }
 
-  &:hover {
-    transform: scale(1.02);
-  }
-  &:active {
-    transform: scale(0.98);
+    &:hover {
+      transform: scale(1.02);
+    }
+    &:active {
+      transform: scale(0.98);
+    }
   }
 `;
 
@@ -70,12 +75,14 @@ export const PlayerCrown: React.FC<PlayerCrownProps> = ({
   return (
     <>
       <HighlightGroups hovered={hovered} groups={groups} />
-      <Crown
-        data-won={isWon}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-      >
-        {score}
+      <Crown>
+        <div
+          data-won={isWon}
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+        >
+          {score}
+        </div>
       </Crown>
     </>
   );
