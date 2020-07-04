@@ -10,7 +10,8 @@ import {
 } from "components";
 
 const Wrapper = styled.div`
-  min-height: 100vh;
+  min-height: max(640px, 100vh);
+
   position: relative;
   & > div.content {
     z-index: 1;

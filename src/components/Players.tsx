@@ -7,7 +7,7 @@ import { Player as IPlayer } from "interfaces";
 const PlayersWrapper = styled.div`
   overflow: auto;
   text-align: center;
-  padding-top: 20vh;
+  padding-top: 125px;
 
   position: absolute;
   left: 0;
