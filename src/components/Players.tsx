@@ -14,7 +14,7 @@ const PlayersWrapper = styled.div`
   right: 0;
   bottom: 0;
 
-  @media (max-height: 800px) {
+  @media (max-height: 720px) {
     bottom: -20%;
   }
 
