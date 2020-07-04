@@ -1,4 +1,4 @@
-![App shot](https://github.com/snelsi/poker/public/shot.jpg)
+![App shot](https://github.com/snelsi/poker/blob/master/public/shot.jpg)
 
 # Poker Game
 
