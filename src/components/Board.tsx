@@ -12,6 +12,10 @@ import {
 const Wrapper = styled.div`
   min-height: max(640px, 100vh);
 
+  @media (max-height: 640px) {
+    min-height: 640px;
+  }
+
   position: relative;
   & > div.content {
     z-index: 1;
